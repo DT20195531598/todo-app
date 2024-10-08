@@ -1,8 +1,8 @@
 pipeline{
     agent any
-    tools {
+    // tools {
        // nodejs 'NodeJs'
-    }
+   // }
     environment {
         IMAGE_NAME = "threed"
         REGISTRY = "swamy59"
