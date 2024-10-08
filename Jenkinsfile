@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools {
-        nodejs 'NodeJs'
+       // nodejs 'NodeJs'
     }
     environment {
         IMAGE_NAME = "threed"
