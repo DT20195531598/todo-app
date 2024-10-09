@@ -12,7 +12,8 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
-                git credentialsId: '86f0e001-9fef-4cce-8f56-9ddbc68d372a', url: 'https://github.com/DT20195531598/todo-app'
+                sh 'git clone https://github.com/DT20195531598/todo-app'
+		sh 'cd /todo-app'
             }
         }
         stage('file'){
