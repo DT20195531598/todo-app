@@ -5,14 +5,14 @@ pipeline{
    // }
     environment {
         IMAGE_NAME = "threed"
-        REGISTRY = "swamy59"
+        REGISTRY = "ramya2526"
         VERSION = "1.0.${env.BUILD_NUMBER}"
     }
 
     stages{
         stage('checkout'){
             steps{
-                git credentialsId: 'gitcreds', url: 'https://github.com/swamy59/todo-app'
+                git credentialsId: '86f0e001-9fef-4cce-8f56-9ddbc68d372a', url: 'https://github.com/DT20195531598/todo-app'
             }
         }
         stage('file'){
@@ -25,7 +25,7 @@ pipeline{
         stage("push"){
             steps{
                 script{
-                    docker.withRegistry('https://index.docker.io/v1/','dockercreds') {
+                    docker.withRegistry('https://index.docker.io/v1/','b9dc147c-ac9e-4c19-80e6-c306e1b524b6') {
                         docker.image("${env.REGISTRY}/${env.IMAGE_NAME}:${env.VERSION}").push()
                     }
                 }
