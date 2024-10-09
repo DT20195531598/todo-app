@@ -15,7 +15,7 @@ pipeline{
 		cleanWs()
                 sh 'git clone https://github.com/DT20195531598/todo-app.git'
 		// sh 'cd /todo-app'
-		sh 'apt-get install docker -y'
+		//sh 'apt-get install docker -y'
             }
         }
         stage('file'){
@@ -28,7 +28,7 @@ pipeline{
         stage("push"){
             steps{
                 script{
-                    docker.withRegistry('https://index.docker.io/v1/','b9dc147c-ac9e-4c19-80e6-c306e1b524b6') {
+                    docker.withRegistry('https://index.docker.io/v1/','docker') {
                         docker.image("${env.REGISTRY}/${env.IMAGE_NAME}:${env.VERSION}").push()
                     }
                 }
