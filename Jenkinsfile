@@ -15,7 +15,7 @@ pipeline{
 		cleanWs()
                 sh 'git clone https://github.com/DT20195531598/todo-app.git'
 		// sh 'cd /todo-app'
-		sh 'yum install docker -y'
+		sh 'apt-get install docker -y'
             }
         }
         stage('file'){
