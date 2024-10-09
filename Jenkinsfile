@@ -23,10 +23,10 @@ pipeline{
         stage('file'){
             steps{
                 script{
-                    // docker.build("${env.REGISTRY}/${env.IMAGE_NAME}:${env.VERSION}","./web")
-		    sh 'cd todo-app/web'
-		    sh 'ls -l'
-		    sh 'docker build -t ramya2526/threed:${env.VERSION} ./todo-app/web'
+                    docker.build("${env.REGISTRY}/${env.IMAGE_NAME}:${env.VERSION}","./todo-app/web")
+		    //sh 'cd todo-app/web'
+		    //sh 'ls -l'
+		    //sh 'docker build -t ramya2526/threed:${env.VERSION} ./todo-app/web'
                 }
             } 
             }
