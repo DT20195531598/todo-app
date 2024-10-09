@@ -13,9 +13,9 @@ pipeline{
         stage('checkout'){
             steps{
 		cleanWs()
-                // sh 'git clone https://github.com/DT20195531598/todo-app.git'
+                sh 'git clone https://github.com/DT20195531598/todo-app.git'
 		// sh 'cd /todo-app'
-		sh 'docker build -t ramya2526/threed:${env.VERSION} ./web'
+		sh 'yum install docker -y'
             }
         }
         stage('file'){
