@@ -25,6 +25,7 @@ pipeline{
                 script{
                     // docker.build("${env.REGISTRY}/${env.IMAGE_NAME}:${env.VERSION}","./web")
 		    sh 'cd todo-app/web'
+		    sh 'll'
 		    sh 'docker build -t ramya2526/threed:1.0.5 .'
                 }
             } 
