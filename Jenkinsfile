@@ -22,7 +22,7 @@ pipeline{
             steps{
                 script{
                     // docker.build("${env.REGISTRY}/${env.IMAGE_NAME}:${env.VERSION}","./web")
-		    sh 'sudo docker build -t ramya2526/threed:1.0.5 ./web'
+		    sh 'docker build -t ramya2526/threed:1.0.5 ./web'
                 }
             } 
             }
