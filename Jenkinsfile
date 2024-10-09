@@ -16,6 +16,8 @@ pipeline{
                 sh 'git clone https://github.com/DT20195531598/todo-app.git'
 		// sh 'cd /todo-app'
 		//sh 'apt-get install docker -y'
+		sh "pwd"
+		sh 'ls'
             }
         }
         stage('file'){
