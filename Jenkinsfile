@@ -12,6 +12,7 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
+		cleanWs()
                 sh 'git clone https://github.com/DT20195531598/todo-app.git'
 		// sh 'cd /todo-app'
             }
