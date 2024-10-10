@@ -1,8 +1,9 @@
 pipeline{
     agent any
-    // tools {
+     tools {
        // nodejs 'NodeJs'
-   // }
+	  nodejs 'NodeJS 14' // The name you gave when configuring NodeJS
+    }
     environment {
         IMAGE_NAME = "threed"
         REGISTRY = "ramya2526"
